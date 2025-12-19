@@ -5,10 +5,10 @@ FROM eclipse-temurin:17-jdk-jammy AS builder
 # Set the working directory in the container
 WORKDIR /app
 
-# Install Maven (or Gradle if you are using it)
+# Install Maven
 RUN apt-get update && apt-get install -y maven
 
-# Copy the pom.xml and source code into the contcleaar ainer
+# Copy the pom.xml and source code into the contctainer
 COPY pom.xml /app/
 COPY src /app/src/
 
